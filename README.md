@@ -70,13 +70,13 @@ $ az ml experiment submit -c <myhdi> <pyspark.py>
     
 ```
 .\IaC\CreateDeployment.ps1 `
+    -subscriptionName "<azure subscription name>" `
+    -Location "<region>" `
     -prefix "<resource prefix>" `
     -unique "<prefix suffix for uniqueness>" `
-    -Location "<region>" `
     -sourceBlobPath "<source data location>" `
     -sinkBlobPath "<sink data location>" `
-    -gitPassword "<gitAccessKey>" `
-    -subscriptionName "<azure subscription name>" `
+    -gitPassword "<gitAccessKey>" `    
     -dsvm "<dsvm>" `
     -pythonPath "<pyspark.py>"
 ```
