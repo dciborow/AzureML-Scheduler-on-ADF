@@ -36,16 +36,14 @@ $ az ml experiment prepare -c <myhdi>
 
 ## Run the Model from Local Machine
 
-**Note**: To run sweep_spark.py, you must select DSVM or HDInsight Spark cluster as compute target. The sweep_sklearn.py can run on local Python also.
 
-
-DSVM run using spark-sklearn
+DSVM running a pyspark job.
 
 ```bash
 $ az ml experiment submit -c <dsvm> <pyspark.py>
 ```
 
-HDInsight Spark run using spark-sklearn:
+HDInsight Spark running a pyspark job.
 
 ```bash
 $ az ml experiment submit -c <myhdi> <pyspark.py>
