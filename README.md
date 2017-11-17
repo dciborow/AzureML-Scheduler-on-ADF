@@ -70,8 +70,6 @@ $ az ml experiment submit -c <myhdi> <pyspark.py>
     -Location "<region>" `
     -prefix "<resource prefix>" `
     -unique "<prefix suffix for uniqueness>" `
-    -sourceBlobPath "<source data location>" `
-    -sinkBlobPath "<sink data location>" `
     -gitPassword "<vstsPat>" `    
     -dsvm "<dsvm>" `
     -pythonPath "<pyspark.py>"
