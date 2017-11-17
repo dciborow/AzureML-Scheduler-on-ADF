@@ -38,9 +38,9 @@ param(
  [string]
   $prefix,
 
-  [Parameter(Mandatory=$True)]
+  [Parameter]
   [string]
-  $unique,
+  $unique = (Get-Random -minimum 1 -maximum 99999),
 
   [Parameter(Mandatory=$True)]
   [string]
