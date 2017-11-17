@@ -46,13 +46,13 @@ param(
   [string]
   $Location,
 
-  [Parameter(Mandatory=$True)]
+  [Parameter]
   [string]
-  $sourceBlobPath,
+  $sourceBlobPath = "/",
 
-  [Parameter(Mandatory=$True)]
+  [Parameter]
   [string]
-  $sinkBlobPath,
+  $sinkBlobPath = "/",
  
   [Parameter]
   [string]
