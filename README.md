@@ -55,7 +55,7 @@ $ az ml experiment submit -c <myhdi> <pyspark.py>
 
 1. Download and place IaC folder within your AML Workspace project directory.
 1. Download and place batch task within your AML Workspace project directory.
-1. Open Powershell and execute the following command.
+1. Select **File**, **Open Powershell** and enter the following command to create the deployment.
     1. define a prefix for all resources
     1. define a unique string all lower case
     1. Pick region (ADF will deploy to US East regardless)
