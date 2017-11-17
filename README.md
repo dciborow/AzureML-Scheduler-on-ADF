@@ -60,7 +60,7 @@ $ az ml experiment submit -c <myhdi> <pyspark.py>
     1. Pick region (ADF will deploy to US East regardless)    
     1. define a prefix for all resources
     1. define a unique string all lower case
-    1. [Make Git Access Key](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
+    1. [Make VSTS Git Access Key](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
     1. DSVM Compute Target
     1. Path in AML Workbench project to code
     
@@ -72,7 +72,7 @@ $ az ml experiment submit -c <myhdi> <pyspark.py>
     -unique "<prefix suffix for uniqueness>" `
     -sourceBlobPath "<source data location>" `
     -sinkBlobPath "<sink data location>" `
-    -gitPassword "<gitAccessKey>" `    
+    -gitPassword "<vstsPat>" `    
     -dsvm "<dsvm>" `
     -pythonPath "<pyspark.py>"
 ```
