@@ -5,7 +5,7 @@ This sample shows how to leverage ADF to run an experiment.
 ![](./AMLWwADF.png)
 
 ## Prerequisites
-Create Azure Machine Learning Preview accounts and install Azure Machine Learning Workbench using [these instructions](https://docs.microsoft.com/en-us/azure/machine-learning/preview/quickstart-installation)
+Create Azure Machine Learning Preview accounts and install Azure Machine Learning Workbench using [these instructions](https://docs.microsoft.com/en-us/azure/machine-learning/preview/quickstart-installation).
 
 ## Create Compute Targets
 
