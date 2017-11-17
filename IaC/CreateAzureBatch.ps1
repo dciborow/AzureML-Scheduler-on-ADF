@@ -70,7 +70,7 @@ if(!$pool){
     $batchJobResources.Add($batchJobMarlingProgramResource)
     $startUpTask.ResourceFiles = $batchJobResources
     $startUpTask.WaitForSuccess = $true
-    $startUpTask.CommandLine ="cmd /c msiexec /i AmlWorkbenchSetup.msi /quiet" #/silent /quiet
+    $startUpTask.CommandLine ="cmd /c msiexec -i AmlWorkbenchSetup.msi  /qn && D:\Users\$batchUser\AppData\Local\AmlInstaller\Installer.Windows.exe --silent" #/silent /quiet
     $startUpTask.UserIdentity = "$batchUser"
  
     $userAccount = New-Object Microsoft.Azure.Commands.Batch.Models.PSUserAccount -ArgumentList @($batchUser, $password, "admin")
