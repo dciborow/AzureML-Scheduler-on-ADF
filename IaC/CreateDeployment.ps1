@@ -54,25 +54,25 @@ param(
   [string]
   $sinkBlobPath,
  
-  [Parameter(Mandatory=$True)]
+  [Parameter]
   [string]
-  $gitUser,
+  $gitUser = (git config user.email).split("@")[0],
 
   [Parameter(Mandatory=$True)]
   [string]
   $gitPassword,
 
-  [Parameter(Mandatory=$True)]
+  [Parameter]
   [string]
-  $vstsServer,
+  $vstsServer = (git config remote.origin.url).split("//.")[2],
 
-  [Parameter(Mandatory=$True)]
+  [Parameter]
   [string]
-  $vstsAccount,
+  $vstsAccount=(git config remote.origin.url).split("//.")[6],
 
-  [Parameter(Mandatory=$True)]
+  [Parameter]
   [string]
-  $projectDir,
+  $projectDir=(git config remote.origin.url).split("//.")[9],
 
   [Parameter(Mandatory=$True)]
   [string]
