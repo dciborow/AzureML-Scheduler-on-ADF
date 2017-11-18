@@ -54,17 +54,12 @@ $ az ml experiment submit -c <myhdi> <pyspark.py>
 1. Download and place IaC folder within your AML Workspace project directory.
 1. Download and place batch task within your AML Workspace project directory.
 1. Select **File**, **Open Powershell** and enter the following command to create the deployment.
-    1. Azure Subscription Name
-    1. Pick region (ADF will deploy to US East regardless)    
-    1. define a prefix for all resources
-    1. define a unique string all lower case
     1. [Make VSTS Git Access Key](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
     1. DSVM Compute Target
     1. Path in AML Workbench project to code
     
 ```
 .\IaC\CreateDeployment.ps1 `
-    -subscriptionName "<azure subscription name>" `
     -gitPassword "<vstsPat>" `    
     -dsvm "<dsvm>" `
     -pythonPath "<pyspark.py>"
