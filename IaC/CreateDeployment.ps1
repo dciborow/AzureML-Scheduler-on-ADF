@@ -25,8 +25,6 @@
 
   .PARAMETER batchUser
 
-  .PARAMETER subscriptionName
-
   .PARAMETER password
 
   .PARAMETER dsvm
@@ -76,10 +74,6 @@ param(
 
   [Parameter(Mandatory=$True)]
   [string]
-  $subscriptionName,
-
-  [Parameter(Mandatory=$True)]
-  [string]
   $password,
 
   [Parameter(Mandatory=$True)]
@@ -101,7 +95,7 @@ $pipelineName = "MLPipeline"
 $resourceGroupName = "{0}rg" -f $title
 $gitProject = ("https://{0}:{1}@{2}.visualstudio.com/DefaultCollection/{3}/_git/{4}" -f $gitUser, $gitPassword, $vstsServer, $vstsAccount, $projectDir)
 $storageAccountName = "{0}blob" -f $title
-$tenantId = (Get-AzureRmSubscription -SubscriptionName "Marketing Automation" | Select-Object -Property TenantId).TenantId
+$tenantId = (Get-AzureRmContext).Subscription.TenantId
 <# Create Service Princpal
 Here we create an Azure Service Princpal so that we can log in remotely to our Azure Subscription from within our custom activity. 
 The solution is currently configured for password based authentication. 
