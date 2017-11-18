@@ -34,27 +34,27 @@
   .PARAMETER pythonPath
 #>
 param(
- [Parameter(Mandatory=$True)]
+ [Parameter()]
  [string]
-  $prefix,
+  $prefix = "amladf",
 
-  [Parameter]
+  [Parameter()]
   [string]
-  $unique = (Get-Random -minimum 1 -maximum 99999),
+  $unique = (Get-Random -minimum 1 -maximum 999999),
 
-  [Parameter(Mandatory=$True)]
+  [Parameter()]
   [string]
-  $Location,
+  $Location = "East US",
 
-  [Parameter]
+  [Parameter()]
   [string]
   $sourceBlobPath = "/",
 
-  [Parameter]
+  [Parameter()]
   [string]
   $sinkBlobPath = "/",
  
-  [Parameter]
+  [Parameter()]
   [string]
   $gitUser = (git config user.email).split("@")[0],
 
@@ -62,17 +62,17 @@ param(
   [string]
   $gitPassword,
 
-  [Parameter]
+  [Parameter()]
   [string]
   $vstsServer = (git config remote.origin.url).split("//.")[2],
 
-  [Parameter]
+  [Parameter()]
   [string]
   $vstsAccount=(git config remote.origin.url).split("//.")[6],
 
-  [Parameter]
+  [Parameter()]
   [string]
-  $projectDir=(git config remote.origin.url).split("//.")[9],
+  $projectDir=(git config remote.origin.url).split("//.")[8],
 
   [Parameter(Mandatory=$True)]
   [string]
