@@ -65,8 +65,6 @@ $ az ml experiment submit -c <myhdi> <pyspark.py>
 ```
 .\IaC\CreateDeployment.ps1 `
     -subscriptionName "<azure subscription name>" `
-    -Location "<region>" `
-    -prefix "<resource prefix>" `
     -gitPassword "<vstsPat>" `    
     -dsvm "<dsvm>" `
     -pythonPath "<pyspark.py>"
