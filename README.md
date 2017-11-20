@@ -50,7 +50,7 @@ $ az ml experiment submit -c <myhdi> <pyspark.py>
 ```
 
 ## Deploy ADFv2 and other required resources
-
+The creation process creates a new service princple account when run locally. This new account must be used to login to the az ml client from within the workbench if the AMLW secret store is used to store passwords. 
 1. Download and place IaC folder within your AML Workspace project directory.
 1. Download and place batch task within your AML Workspace project directory.
 1. Select **File**, **Open Powershell** and enter the following command to create the deployment.
