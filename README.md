@@ -64,6 +64,19 @@ $ az ml experiment submit -c <myhdi> <pyspark.py>
     -dsvm "<dsvm>" `
     -pythonPath "<pyspark.py>"
 ```
+## On Batch Windows DSVM Image
+RDP into Node using username rdpuser, and provided password.
+### Update Azure PowerShell to >5.X
+1. microsoft web platform installer is on the desktop of DSVM, use this to update Powershell
+### Install AMLW - MSI must be run from admin cmd.
+1. Download AML Workbench from here, https://aka.ms/azureml-wb-msi 
+1. Windows Key
+1. Type cmd 
+1. Right click, select Run as Admin 
+1. Change to D drive with d: 
+1. cd User\{username}\Downloads
+1. AmlWorkbenchSetup.msi
+1. Log into AML Workbench, this is required to create starter folders, remote experiment submission will fail if this is not complete.
 
 # Contributing
 
