@@ -1,4 +1,4 @@
-# Schedule Machine Learning Workbench Experimention on Data Factory v2
+# Schedule Machine Learning Experimention on Data Factory v2
 
 This sample shows how to leverage ADF to run an experiment. 
 
