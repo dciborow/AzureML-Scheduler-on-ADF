@@ -135,9 +135,9 @@ $servicePrincipal = $sp.ApplicationId
     -location $Location 
 
 .\IaC\CreateAzureBatch.ps1 `
-    –AccountName $accountName `
-    –Location $Location `
-    –ResourceGroupName $resourceGroupName `
+    -AccountName $accountName `
+    -Location $Location `
+    -ResourceGroupName $resourceGroupName `
     -batchUser $batchUser `
     -password $password `
     -poolName $poolName
